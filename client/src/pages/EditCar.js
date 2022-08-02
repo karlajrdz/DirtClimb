@@ -14,6 +14,7 @@ function EditCar({ match }) {
     if (cars.length == 0) {
       dispatch(getAllCars());
     } else {
+      //find by id
       settotalcars(cars);
       setcar(cars.find((o) => o._id == match.params.carid));
       console.log(car);
@@ -39,12 +40,14 @@ function EditCar({ match }) {
               layout="vertical"
               onFinish={onFinish}
             >
-              <h3>Edit Car</h3>
+              <h3>Edit Bike</h3>
 
               <hr />
+            
               <Form.Item
+              //Adding form for the data
                 name="name"
-                label="Car name"
+                label="Bike name"
                 rules={[{ required: true }]}
               >
                 <Input />
@@ -65,21 +68,21 @@ function EditCar({ match }) {
               </Form.Item>
               <Form.Item
                 name="capacity"
-                label="Capacity"
+                label="Weight"
                 rules={[{ required: true }]}
               >
                 <Input />
               </Form.Item>
               <Form.Item
                 name="fuelType"
-                label="Fuel Type"
+                label="Type / Description"
                 rules={[{ required: true }]}
               >
                 <Input />
               </Form.Item>
 
               <div className="text-right">
-                <button className="btn1">Edit CAR</button>
+                <button className="btn1">Edit BIKE</button>
               </div>
             </Form>
           )}

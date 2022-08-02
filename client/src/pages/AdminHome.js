@@ -30,7 +30,7 @@ function AdminHome() {
           <div className="d-flex justify-content-between align-items-center">
             <h3 className="mt-1 mr-2">Admin Panel</h3>
             <button className="btn1">
-              <a href="/addcar">ADD CAR</a>
+              <a href="/addcar">ADD BIKE</a>
             </button>
           </div>
         </Col>
@@ -60,7 +60,7 @@ function AdminHome() {
                     </Link>
 
                     <Popconfirm
-                      title="Are you sure to delete this car?"
+                      title="Are you sure to delete this bike?"
                       onConfirm={()=>{dispatch(deleteCar({carid : car._id}))}}
                       
                       okText="Yes"
