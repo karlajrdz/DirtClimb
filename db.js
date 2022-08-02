@@ -6,7 +6,7 @@ function connectDB(){
 
 function connectDB(){
     
-   mongoose.connect('mongodb+srv://Karla:karla@cluster0.cpjxr1u.mongodb.net/DirtClimb', {useUnifiedTopology: true , useNewUrlParser: true})
+   mongoose.connect('mongodb+srv://Karla:1234@cluster0.cpjxr1u.mongodb.net/DirtClimb', {useUnifiedTopology: true , useNewUrlParser: true})
 
     const connection = mongoose.connection
 
