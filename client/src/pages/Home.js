@@ -1,28 +1,28 @@
 import React , {useState,useEffect} from 'react'
 import { useSelector , useDispatch } from 'react-redux'
 import DefaultLayout from '../components/DefaultLayout'
-import { getAllCars } from '../redux/actions/carsActions'
+import { getAllBikes } from '../redux/actions/bikesActions'
 import { Col, Row , Divider , DatePicker, Checkbox} from 'antd'
 import {Link} from 'react-router-dom'
 import Spinner from '../components/Spinner';
 import moment from 'moment'
 const {RangePicker} = DatePicker
 function Home() {
-    const {cars} = useSelector(state=>state.carsReducer)
+    const {bikes} = useSelector(state=>state.bikesReducer)
     const {loading} = useSelector(state=>state.alertsReducer)
-    const [totalCars , setTotalcars] = useState([])
+    const [totalBikes , setTotalbikes] = useState([])
     const dispatch = useDispatch()
     
 
     useEffect(() => {
-        dispatch(getAllCars())
+        dispatch(getAllBikes())
     }, [])
 
     useEffect(() => {
 
-        setTotalcars(cars)
+        setTotalbikes(bikes)
         
-    }, [cars])
+    }, [bikes])
 
 
     function setFilter(values){
@@ -32,14 +32,14 @@ function Home() {
 
         var temp=[]
 
-        for(var car of cars){
+        for(var bike of bikes){
 
-              if(car.bookedTimeSlots.length == 0){
-                  temp.push(car)
+              if(bike.bookedTimeSlots.length == 0){
+                  temp.push(bike)
               }
               else{
 
-                   for(var booking of car.bookedTimeSlots) {
+                   for(var booking of bike.bookedTimeSlots) {
 
                        if(selectedFrom.isBetween(booking.from , booking.to) ||
                        selectedTo.isBetween(booking.from , booking.to) || 
@@ -50,7 +50,7 @@ function Home() {
 
                        }
                        else{
-                           temp.push(car)
+                           temp.push(bike)
                        }
 
                    }
@@ -60,7 +60,7 @@ function Home() {
         }
 
 
-        setTotalcars(temp)
+        setTotalbikes(temp)
 
 
     }
@@ -84,20 +84,20 @@ function Home() {
               
               <Row justify='center' gutter={16}>
 
-                   {totalCars.map(car=>{
+                   {totalBikes.map(bike=>{
                        return <Col lg={5} sm={24} xs={24}>
-                            <div className="car p-2 bs1">
-                               <img src={car.image} className="carimg"/>
+                            <div className="bike p-2 bs1">
+                               <img src={bike.image} className="bikeimg"/>
 
-                               <div className="car-content d-flex align-items-center justify-content-between">
+                               <div className="bike-content d-flex align-items-center justify-content-between">
 
                                     <div className='text-left pl-2'>
-                                        <p>{car.name}</p>
-                                        <p> Rent Per Hour {car.rentPerHour} /-</p>
+                                        <p>{bike.name}</p>
+                                        <p> Rent Per Hour {bike.rentPerHour} /-</p>
                                     </div>
 
                                     <div>
-                                        <button className="btn1 mr-2"><Link to={`/booking/${car._id}`}>Book Now</Link></button>
+                                        <button className="btn1 mr-2"><Link to={`/booking/${bike._id}`}>Book Now</Link></button>
                                     </div>
 
                                </div>

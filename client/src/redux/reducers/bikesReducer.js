@@ -1,16 +1,16 @@
 const initialData = {
-    cars : [],
+    bikes : [],
 
 };
 
-export const carsReducer = (state=initialData , action)=>{
+export const bikesReducer = (state=initialData , action)=>{
 
      switch(action.type)
      {
-         case 'GET_ALL_CARS' : {
+         case 'BIKES' : {
              return{
                  ...state,
-                 cars : action.payload
+                 bikes : action.payload
              }
          }
          
