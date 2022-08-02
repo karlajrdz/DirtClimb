@@ -25,8 +25,8 @@ function Register() {
            className='w-100'
            data-aos='slide-left'
            data-aos-duration='1500'
-          src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80" />
-          <h1 className="login-logo">SHEYCARS</h1>
+          src="https://img.redbull.com/images/c_fill,w_1200,h_630,g_auto,f_auto,q_auto/redbullcom/2020/12/3/c1zjbxauahxsq0vqb09s/the-old-world-visual" />
+          <h1 className="login-logo">D I R T C L  M B</h1>
         </Col>
         <Col lg={8} className="text-left p-5">
           <Form layout="vertical" className="login-form p-5" onFinish={onFinish}>

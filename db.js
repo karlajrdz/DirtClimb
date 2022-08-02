@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 function connectDB(){
 
-    mongoose.connect('mongodb+srv://sathya:sathyapr@cluster0.dkuc0.mongodb.net/sheycars-udemy' , {useUnifiedTopology: true , useNewUrlParser: true})
+    mongoose.connect('mongodb+srv://Karla:1234@cluster0.cpjxr1u.mongodb.net/DirtClimb' , {useUnifiedTopology: true , useNewUrlParser: true})
 
     const connection = mongoose.connection
 

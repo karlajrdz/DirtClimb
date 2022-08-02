@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+//adding schema for admin functions
 const carSchema = new mongoose.Schema({
 
     name : {type : String , required : true} ,

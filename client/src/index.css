@@ -106,6 +106,8 @@ button{
 .login label , .login h1{
   color: white !important;
   opacity: 0.6;
+  position: center;
+  
 }
 .login-form{
   background-color: #1F1F1F;
@@ -117,13 +119,13 @@ button{
   opacity: 0.5;
 }
 .login-logo{
-  position: absolute;
-  left:0;
+  position: bottom;
+  left:00.70;
   right:0;
   top: 60%;
   bottom: 50%;
   transform: translateY(-50% , -50%);
-  font-size:45px;
+  font-size:60px;
   opacity: 0.2 !important;
   
 

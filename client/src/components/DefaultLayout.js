@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu, Dropdown, Button, Space , Row , Col } from "antd";
 import {Link} from 'react-router-dom'
-
+//Meni items and footer
 function DefaultLayout(props) {
     const user = JSON.parse(localStorage.getItem('user'))
   const menu = (
