@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Dropdown, Button, Space, Row, Col } from "antd";
+import { Menu, Dropdown, Button, Row, Col } from "antd";
 import { Link } from "react-router-dom";
 //Menu items and footer
 function DefaultLayout(props) {
@@ -19,9 +19,8 @@ function DefaultLayout(props) {
         onClick={() => {
           localStorage.removeItem("user");
           window.location.href = "/login";
-        }}
-      >
-        <li style={{ color: "orangered" }}>Logout</li>
+        }}>
+     <li style={{ color:"orangered" }}>Logout</li>
       </Menu.Item>
     </Menu>
   );
@@ -47,7 +46,6 @@ function DefaultLayout(props) {
         </Row>
       </div>
       <div className="content">{props.children}</div>
-
       <div className="footer text-center">
         <hr />
       </div>
