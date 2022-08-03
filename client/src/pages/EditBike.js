@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import DefaultLayout from "../components/DefaultLayout";
 import Spinner from "../components/Spinner";
-import { addCar, editCar, getAllCars } from "../redux/actions/carsActions";
-function EditCar({ match }) {
+import { addCar, editCar, getAllCars } from "../redux/actions/bikesActions";
+function EditBike({ match }) {
   const { cars } = useSelector((state) => state.carsReducer);
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.alertsReducer);
@@ -92,4 +92,4 @@ function EditCar({ match }) {
   );
 }
 
-export default EditCar;
+export default EditBike;

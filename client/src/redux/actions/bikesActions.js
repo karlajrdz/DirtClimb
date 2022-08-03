@@ -24,7 +24,7 @@ export const addCar=(reqObj)=>async dispatch=>{
          await axios.post('/api/cars/addcar' , reqObj)
        
          dispatch({type: 'LOADING' , payload:false})
-         message.success('New car added successfully')
+         message.success('New bike added successfully')
          setTimeout(() => {
             window.location.href='/admin'
          }, 500);
@@ -44,7 +44,7 @@ export const editCar=(reqObj)=>async dispatch=>{
          await axios.post('/api/cars/editcar' , reqObj)
        
          dispatch({type: 'LOADING' , payload:false})
-         message.success('Car details updated successfully')
+         message.success('Bike details updated successfully')
          setTimeout(() => {
             window.location.href='/admin'
          }, 500);
@@ -64,7 +64,7 @@ export const deleteCar=(reqObj)=>async dispatch=>{
          await axios.post('/api/cars/deletecar' , reqObj)
        
          dispatch({type: 'LOADING' , payload:false})
-         message.success('Car deleted successfully')
+         message.success('Bike deleted successfully')
          setTimeout(() => {
             window.location.reload()
          }, 500);

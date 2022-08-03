@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import DefaultLayout from "../components/DefaultLayout";
 import Spinner from "../components/Spinner";
-import { getAllCars } from "../redux/actions/carsActions";
+import { getAllCars } from "../redux/actions/bikesActions";
 import moment from "moment";
 import { bookCar } from "../redux/actions/bookingActions";
 import StripeCheckout from "react-stripe-checkout";
@@ -11,7 +11,7 @@ import AOS from "aos";
 
 import "aos/dist/aos.css"; // You can also use <link> for styles
 const { RangePicker } = DatePicker;
-function BookingCar({ match }) {
+function BookingBike({ match }) {
   const { cars } = useSelector((state) => state.carsReducer);
   const { loading } = useSelector((state) => state.alertsReducer);
   const [car, setcar] = useState({});
@@ -176,4 +176,4 @@ function BookingCar({ match }) {
   );
 }
 
-export default BookingCar;
+export default BookingBike;

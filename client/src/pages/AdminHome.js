@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import DefaultLayout from "../components/DefaultLayout";
-import { deleteCar, getAllCars } from "../redux/actions/carsActions";
+import { deleteCar, getAllCars } from "../redux/actions/bikesActions";
 import { Col, Row, Divider, DatePicker, Checkbox, Edit } from "antd";
 import { Link } from "react-router-dom";
 import Spinner from "../components/Spinner";
-import moment from "moment";
+//simport moment from "moment";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { Popconfirm, message } from "antd";
 const { RangePicker } = DatePicker;

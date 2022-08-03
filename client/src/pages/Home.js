@@ -1,7 +1,7 @@
 import React , {useState,useEffect} from 'react'
 import { useSelector , useDispatch } from 'react-redux'
 import DefaultLayout from '../components/DefaultLayout'
-import { getAllCars } from '../redux/actions/carsActions'
+import { getAllCars } from '../redux/actions/bikesActions'
 import { Col, Row  , DatePicker, Checkbox} from 'antd'
 import {Link} from 'react-router-dom'
 import Spinner from '../components/Spinner';

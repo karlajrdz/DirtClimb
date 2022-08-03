@@ -4,12 +4,12 @@ import {Route , BrowserRouter , Redirect} from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
-import BookingCar from './pages/BookingCar'
+import BookingBike from './pages/BookingBike'
 import 'antd/dist/antd.css';
 import UserBookings from './pages/UserBookings';
-import AddCar from './pages/AddCar';
+import AddBike from './pages/AddBike';
 import AdminHome from './pages/AdminHome';
-import EditCar from './pages/EditCar';
+import EditBike from './pages/EditBike';
 
 function App() {
   return (
@@ -22,10 +22,10 @@ function App() {
              <ProtectedRoute path='/' exact component={Home} />
              <Route path='/login' exact component={Login} />
              <Route path='/register' exact component={Register} />
-             <ProtectedRoute path='/booking/:carid' exact component={BookingCar} />
+             <ProtectedRoute path='/booking/:carid' exact component={BookingBike} />
              <ProtectedRoute path='/userbookings' exact component={UserBookings} />
-             <ProtectedRoute path='/addcar' exact component={AddCar} />
-             <ProtectedRoute path='/editcar/:carid' exact component={EditCar} />
+             <ProtectedRoute path='/addBikeBookingbike' exact component={AddBike} />
+             <ProtectedRoute path='/editcar/:carid' exact component={EditBike} />
              <ProtectedRoute path='/admin' exact component={AdminHome} />
          
          </BrowserRouter>

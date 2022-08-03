@@ -3,8 +3,8 @@ import React from 'react'
 import { useDispatch , useSelector } from 'react-redux'
 import DefaultLayout from '../components/DefaultLayout'
 import Spinner from '../components/Spinner'
-import { addCar } from '../redux/actions/carsActions'
-function AddCar() {
+import { addCar } from '../redux/actions/bikesActions'
+function AddBike() {
 
     const dispatch = useDispatch()
     const {loading} = useSelector(state=>state.alertsReducer)
@@ -53,4 +53,4 @@ function AddCar() {
     )
 }
 
-export default AddCar
+export default AddBike
