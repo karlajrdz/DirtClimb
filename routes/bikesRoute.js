@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Car = require("../models/carModel");
+const Car = require("../models/bikeModel");
 
 router.get("/getallcars", async (req, res) => {
   try {
@@ -15,7 +15,7 @@ router.post("/addcar", async (req, res) => {
   try {
     const newcar = new Car(req.body);
     await newcar.save();
-    res.send("Car added successfully");
+    res.send("Bike added successfully");
   } catch (error) {
     return res.status(400).json(error);
   }
@@ -32,7 +32,7 @@ router.post("/editcar", async (req, res) => {
 
     await car.save();
 
-    res.send("Car details updated successfully");
+    res.send("Bike details updated successfully");
   } catch (error) {
     return res.status(400).json(error);
   }
@@ -42,7 +42,7 @@ router.post("/deletecar", async (req, res) => {
   try {
     await Car.findOneAndDelete({ _id: req.body.carid });
 
-    res.send("Car deleted successfully");
+    res.send("Bike deleted successfully");
   } catch (error) {
     return res.status(400).json(error);
   }
